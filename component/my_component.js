@@ -1,11 +1,26 @@
 export default{
     data(){
-        return{
-            object: {
-                Animales : "Ballena" ,
-                Ecosistema: "Marino" ,
-                Cantidad: null
-            }
+        return {
+            lista: [],
+
+            nombre: null,
+            edad: null,
+            transporte: null
+
+        }
+    },
+
+    methods:{
+        crearobj(){
+            this.lista.push({
+                nom: this.nombre,
+                edad: this.edad,
+                trans: this.transporte
+            })
+
+            this.nombre = null,
+            this.edad = null,
+            this.transporte = null
         }
     }
 }
